@@ -1,7 +1,7 @@
 clusterGroup:
   name: hub
   isHubCluster: true
-  storageClass: gp2
+  storageClass: nutanix-volume
 
 # Namespaces that are expected to be created.
 # The pattern will apply these namespaces
@@ -14,7 +14,7 @@ clusterGroup:
   - stackrox
   - policies
   - devsecops-ci
-  - openshift-storage
+#  - openshift-storage
   - quay-enterprise
 
 #  subscriptions:  OpenShift Operator subscriptions from OLM/OperatorHub
@@ -35,10 +35,10 @@ clusterGroup:
       namespace: openshift-operators # operator namespace
       channel: rhacs-3.68
 
-    odf-operator:
-      name: odf-operator
-      namespace: openshift-storage
-      channel: stable-4.10
+#    odf-operator:
+#      name: odf-operator
+#      namespace: openshift-storage
+#      channel: stable-4.10
 
     quay-operator:
       name: quay-operator
