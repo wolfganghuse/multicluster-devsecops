@@ -6,7 +6,7 @@ spec:
   bucketClaimName: nutanix-quay-br
   protocol: s3
   bucketAccessClassName: nutanix-bac
-  credentialsSecretName: bucketcreds
+  credentialsSecretName: quay-bucketcreds
 ---
 kind: BucketAccess
 apiVersion: objectstorage.k8s.io/v1alpha1
@@ -16,4 +16,4 @@ spec:
   bucketClaimName: nutanix-acm-br
   protocol: s3
   bucketAccessClassName: nutanix-bac
-  credentialsSecretName: bucketcreds
+  credentialsSecretName: acm-bucketcreds
