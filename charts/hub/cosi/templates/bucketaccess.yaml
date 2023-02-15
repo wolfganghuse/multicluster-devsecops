@@ -1,0 +1,19 @@
+kind: BucketAccess
+apiVersion: objectstorage.k8s.io/v1alpha1
+metadata:
+  name: nutanix-bar
+spec:
+  bucketClaimName: nutanix-quay-br
+  protocol: s3
+  bucketAccessClassName: nutanix-bac
+  credentialsSecretName: bucketcreds
+---
+kind: BucketAccess
+apiVersion: objectstorage.k8s.io/v1alpha1
+metadata:
+  name: nutanix-bar
+spec:
+  bucketClaimName: nutanix-acm-br
+  protocol: s3
+  bucketAccessClassName: nutanix-bac
+  credentialsSecretName: bucketcreds
