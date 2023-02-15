@@ -14,6 +14,7 @@ clusterGroup:
   - policies
   - devsecops-ci
 #  - openshift-storage Not needed for NCP
+  - cosi
   - quay-enterprise
 
 #  subscriptions:  OpenShift Operator subscriptions from OLM/OperatorHub
@@ -81,6 +82,12 @@ clusterGroup:
 #      namespace: openshift-storage
 #      project: opp
 #      path: charts/hub/odf
+
+    cosi-driver:
+      name: cosi-driver
+      namespace: cosi
+      project: opp
+      path: charts/hub/cosi
 
     quay-registry:
       name: quay-registry
