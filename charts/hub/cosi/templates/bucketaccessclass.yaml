@@ -1,0 +1,6 @@
+kind: BucketAccessClass
+apiVersion: objectstorage.k8s.io/v1alpha1
+metadata:
+  name: demo-bac
+driverName: ntnx.objectstorage.k8s.io
+authenticationType: KEY
