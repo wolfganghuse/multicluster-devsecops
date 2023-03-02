@@ -22,7 +22,7 @@ quay:
   - name: quay
     managed: true
   - name: clairpostgres
-    managed: true
+    managed: false
   configBundleSecret:
     deploy: true
     name: quay-init-config-bundle-secret
