@@ -26,29 +26,6 @@ global:
     dev_revision: main
 
   quay:
-    component:
-    - name: clair
-      managed: true
-    - name: horizontalpodautoscaler
-      managed: true
-    - name: mirror
-      managed: true
-    - name: monitoring
-      managed: true
-    - name: postgres
-      managed: false
-    - name: redis
-      managed: false
-    - name: objectstorage
-      managed: false
-    - name: route
-      managed: true
-    - name: tls
-      managed: true
-    - name: quay
-      managed: true
-    - name: clairpostgres
-      managed: true
     # Needs to be set consistently between hub and spoke clusters
     # TODO: Move back to the hub chart, store in a configmap, have an ACM policy distribute to spoke clusters, have spoke look up from configmap
     s3:
