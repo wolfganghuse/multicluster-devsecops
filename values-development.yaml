@@ -50,7 +50,7 @@ clusterGroup:
     openshift-pipelines:
       name: openshift-pipelines-operator-rh
       namespace: openshift-operators
-      channel: pipelines-1.7
+      channel: pipelines-1.8
 
     quay-bridge-operator:
       name: quay-bridge-operator
