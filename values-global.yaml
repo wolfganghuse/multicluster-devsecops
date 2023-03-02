@@ -36,9 +36,9 @@ global:
     - name: monitoring
       managed: true
     - name: postgres
-      managed: true
+      managed: false
     - name: redis
-      managed: true
+      managed: false
     - name: objectstorage
       managed: false
     - name: route
