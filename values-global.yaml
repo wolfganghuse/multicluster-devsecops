@@ -26,8 +26,35 @@ global:
     dev_revision: main
 
   quay:
+    component:
+    - name: clair
+      managed: true
+    - name: horizontalpodautoscaler
+      managed: true
+    - name: mirror
+      managed: true
+    - name: monitoring
+      managed: true
+    - name: postgres
+      managed: true
+    - name: redis
+      managed: true
+    - name: objectstorage
+      managed: false
+    - name: route
+      managed: true
+    - name: tls
+      managed: true
+    - name: quay
+      managed: true
+    - name: clairpostgres
+      managed: true
     # Needs to be set consistently between hub and spoke clusters
     # TODO: Move back to the hub chart, store in a configmap, have an ACM policy distribute to spoke clusters, have spoke look up from configmap
+    s3host: objects.az01.ocpnvd.dachlab.net
+    accesskey: dGjyM6XslvzU_2K80TT0PAibzMB7I31_
+    secretkey: 96N2mcqGY_EIIbsc6WCoFVBz2wyBs2nQ
+    bucket: quay
     org:
       name: devel
       email: devel@myorg.com
