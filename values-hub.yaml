@@ -6,6 +6,7 @@ clusterGroup:
 # The pattern will apply these namespaces
 # and creates an operator group for that namespace
   namespaces:
+  - openshift-cluster-csi-drivers
   - open-cluster-management
   - vault
   - golang-external-secrets
@@ -24,6 +25,10 @@ clusterGroup:
 #         only used if global.options.useCSV: true in values-global.yaml
 
   subscriptions:
+    nutanixcsi:
+      name: nutanixcsioperator  #packageName
+      namespace: openshift-cluster-csi-drivers # operator namespace
+      channel: stable
     acm:
       name: advanced-cluster-management
       namespace: open-cluster-management
@@ -33,11 +38,6 @@ clusterGroup:
       name: rhacs-operator  #packageName
       namespace: openshift-operators # operator namespace
       channel: rhacs-3.71
-      
-    nutanixcsi:
-      name: nutanixcsioperator  #packageName
-      namespace: openshift-cluster-csi-drivers # operator namespace
-      channel: stable
             
     quay:
       name: quay-operator
@@ -48,12 +48,18 @@ clusterGroup:
 # OpenShift GitOps (ArgoCD)
 # Projects are just ArgoCD groupings that can be filtered on.
   projects:
+  - nutanix
   - hub
   - opp
   - external-secrets
-  - nutanix
-
+  
   applications:
+    nutanixcsi:
+      name: nutanixcsi
+      namespace: openshift-cluster-csi-drivers
+      project: nutanix
+      path: common/nutanixcsi
+
     acm:
       name: acm   #arbitary
       namespace: open-cluster-management
@@ -76,12 +82,6 @@ clusterGroup:
       namespace: stackrox
       project: opp
       path: charts/hub/acs/secured
-
-    nutanixcsi:
-      name: nutanixcsi
-      namespace: openshift-cluster-csi-drivers
-      project: nutanix
-      path: common/nutanixcsi
 
 #    storage:   maybe replace with NutanixCSI
 #      name: storage
