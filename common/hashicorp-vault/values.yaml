@@ -8,7 +8,7 @@ vault:
     enabled: false
   ui:
     enabled: true
-    serviceType: "LoadBalancer"
+    serviceType: "ClusterIP"
   server:
     extraEnvironmentVars:
       VAULT_CACERT: /var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt
