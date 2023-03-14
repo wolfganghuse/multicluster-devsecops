@@ -1,0 +1,24 @@
+cloudProvider:
+  storageClass: nutanix-volume
+
+global:
+  quay:
+    server_hostname: quay.ocpnvd.dachlab.net
+    database:
+      host: az01-quayvm.ocpnvd.dachlab.net
+    redis:
+      host: az01-quayvm.ocpnvd.dachlab.net
+    # Needs to be set consistently between hub and spoke clusters
+    # TODO: Move back to the hub chart, store in a configmap, have an ACM policy distribute to spoke clusters, have spoke look up from configmap
+    az01:
+      s3:
+        host: objects.az01.ocpnvd.dachlab.net
+        accesskey: dGjyM6XslvzU_2K80TT0PAibzMB7I31_
+        secretkey: 96N2mcqGY_EIIbsc6WCoFVBz2wyBs2nQ
+        bucket: quay
+    az02:
+      s3:
+        host: objects.az02.ocpnvd.dachlab.net
+        accesskey: dGjyM6XslvzU_2K80TT0PAibzMB7I31_
+        secretkey: 96N2mcqGY_EIIbsc6WCoFVBz2wyBs2nQ
+        bucket: quay
