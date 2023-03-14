@@ -19,6 +19,6 @@ global:
     az02:
       s3:
         host: objects.az02.ocpnvd.dachlab.net
-        accesskey: dGjyM6XslvzU_2K80TT0PAibzMB7I31_
-        secretkey: 96N2mcqGY_EIIbsc6WCoFVBz2wyBs2nQ
+        accesskey: 4CQPockbsLBqjOjihXoEn2TU-Rl5sHEs
+        secretkey: 0HVclTt6j75AcaWBXvh-44XPirEpxls4
         bucket: quay
