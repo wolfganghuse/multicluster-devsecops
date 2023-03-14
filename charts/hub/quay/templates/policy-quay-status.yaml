@@ -32,16 +32,5 @@ spec:
               conditions:
               - status: "True"
                 type: Available
-        - complianceType: musthave
-          objectDefinition:
-            apiVersion: apps/v1
-            kind: Deployment
-            metadata:
-              name: quay-registry-quay-database
-              namespace: quay-enterprise
-            status:
-              conditions:
-              - status: "True"
-                type: Available
         remediationAction: inform
         severity: medium
