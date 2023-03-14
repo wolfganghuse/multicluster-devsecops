@@ -17,6 +17,20 @@ parameters:
 provisioner: kubernetes.io/azure-disk
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
+{{- else if eq .Values.cloudProvider.storageClass "nutanix-volume" }}
+provisioner: csi.nutanix.com
+parameters:
+  csi.storage.k8s.io/provisioner-secret-name: ntnx-secret
+  csi.storage.k8s.io/provisioner-secret-namespace: openshift-cluster-csi-drivers
+  csi.storage.k8s.io/node-publish-secret-name: ntnx-secret
+  csi.storage.k8s.io/node-publish-secret-namespace: openshift-cluster-csi-drivers
+  csi.storage.k8s.io/controller-expand-secret-name: ntnx-secret
+  csi.storage.k8s.io/controller-expand-secret-namespace: openshift-cluster-csi-drivers
+  csi.storage.k8s.io/fstype: ext4
+  storageContainer: ocp
+  storageType: NutanixVolumes
+allowVolumeExpansion: true
+reclaimPolicy: Delete
 {{- else }}
 parameters:
   encrypted: "true"

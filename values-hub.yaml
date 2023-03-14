@@ -1,6 +1,7 @@
 clusterGroup:
   name: hub
   isHubCluster: true
+  storageClass: nutanix-volume
 
 # Namespaces that are expected to be created.
 # The pattern will apply these namespaces
@@ -31,6 +32,7 @@ clusterGroup:
       channel: stable
       source: certified-operators
       sourceNamespace: openshift-marketplace
+
     acm:
       name: advanced-cluster-management
       namespace: open-cluster-management
