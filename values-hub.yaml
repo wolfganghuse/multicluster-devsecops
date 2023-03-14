@@ -29,6 +29,8 @@ clusterGroup:
       name: nutanixcsioperator  #packageName
       namespace: openshift-cluster-csi-drivers # operator namespace
       channel: stable
+      source: certified-operators
+      sourceNamespace: openshift-marketplace
     acm:
       name: advanced-cluster-management
       namespace: open-cluster-management
