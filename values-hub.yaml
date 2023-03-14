@@ -34,6 +34,11 @@ clusterGroup:
       namespace: openshift-operators # operator namespace
       channel: rhacs-3.71
       
+    nutanixcsi:
+      name: nutanixcsioperator  #packageName
+      namespace: openshift-cluster-csi-drivers # operator namespace
+      channel: stable
+            
     quay:
       name: quay-operator
       namespace: openshift-operators
@@ -46,6 +51,7 @@ clusterGroup:
   - hub
   - opp
   - external-secrets
+  - nutanix
 
   applications:
     acm:
@@ -70,6 +76,12 @@ clusterGroup:
       namespace: stackrox
       project: opp
       path: charts/hub/acs/secured
+
+    nutanixcsi:
+      name: nutanixcsi
+      namespace: openshift-cluster-csi-drivers
+      project: nutanix
+      path: common/nutanixcsi
 
 #    storage:   maybe replace with NutanixCSI
 #      name: storage
