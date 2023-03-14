@@ -1,6 +1,0 @@
-kind: BucketClass
-apiVersion: objectstorage.k8s.io/v1alpha1
-metadata:
-  name: nutanix-bc
-driverName: ntnx.objectstorage.k8s.io
-deletionPolicy: Delete
