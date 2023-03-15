@@ -3,7 +3,7 @@ cloudProvider:
 
 global:
   quay:
-    server_hostname: quay.ocpnvd.dachlab.net
+    #server_hostname: quay.ocpnvd.dachlab.net
     database:
       host: az01-quayvm.ocpnvd.dachlab.net
     redis:
