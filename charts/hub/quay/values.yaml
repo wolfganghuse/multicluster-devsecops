@@ -7,6 +7,10 @@ quay:
     managed: true
   - name: mirror
     managed: true
+    overrides:
+      env:
+        - name: QUAY_DISTRIBUTED_STORAGE_PREFERENCE
+          value: az01
   - name: monitoring
     managed: true
   - name: postgres
@@ -21,6 +25,10 @@ quay:
     managed: true
   - name: quay
     managed: true
+    overrides:
+      env:
+        - name: QUAY_DISTRIBUTED_STORAGE_PREFERENCE
+          value: az01
   - name: clairpostgres
     managed: false
   configBundleSecret:
