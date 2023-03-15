@@ -30,12 +30,12 @@ quay:
     admin:
       # Generated password is saved to the 'quay-init-token' secret in the configured namespace
       name: quayadmin
-      email: quayadmin@example.com
-    user:
+      email: quayadmin@nvd.lab
+    #user:
       # Generated password is saved to the 'quay-user' secret in the configured namespace
       # The API only allows the creation of superusers
-      name: developer1
-      email: developer1@myorg.com
+    #  name: developer1
+    #  email: developer1@myorg.com
 
 job:
   image: image-registry.openshift-image-registry.svc:5000/openshift/cli:latest
