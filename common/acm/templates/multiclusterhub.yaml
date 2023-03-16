@@ -5,4 +5,8 @@ metadata:
   namespace: open-cluster-management
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
-spec: {}
+spec:
+  overrides:
+      components:
+        - enabled: true
+          name: cluster-backup
