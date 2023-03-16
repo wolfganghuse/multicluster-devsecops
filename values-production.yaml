@@ -23,7 +23,7 @@ clusterGroup:
     quay-bridge-operator:
       name: quay-bridge-operator
       namespace: openshift-operators
-      channel: stable-3.7
+      channel: stable-3.8
 
   projects:
     - app
